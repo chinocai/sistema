@@ -17,5 +17,5 @@ formulario de creacion de empleadosssssss
 <label for="Nombre"> Foto </label>
 <input class="form-control" type="file" name="Foto" id="Foto">
 <br>
-<input class="form-control" type="submit" name="Enviar" id="Enviar">
+<input class="form-control" type="submit" value="Guardar datos" id="Enviar">
 </form>
