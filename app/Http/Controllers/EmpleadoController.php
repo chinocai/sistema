@@ -15,7 +15,7 @@ class EmpleadoController extends Controller
     public function index()
     {
         $datos['empleados']=Empleado::paginate(5);
-        return view('empleado.index', $datos);
+        return view('empleado.index',$datos);
 
     }
 
@@ -71,7 +71,6 @@ class EmpleadoController extends Controller
     {
         //
         $empleado=Empleado::findOrFail($id);
-
         return view('empleado.edit', compact ('empleado'));
     }
 
@@ -82,9 +81,14 @@ class EmpleadoController extends Controller
      * @param  \App\Models\Empleado  $empleado
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Empleado $empleado)
+    public function update(Request $request, $id)
     {
         //
+        $datosEmpleado = request()->except(['_token', '_method']);
+        Empleado::where('id', '=',$id)->update($datosEmpleado);
+
+        $empleado=Empleado::findOrFail($id);
+        return view('empleado.edit', compact ('empleado'));
     }
 
     /**

@@ -1,10 +1,11 @@
-
 <label for="Nombre"> Nombre </label>
 <input class="form-control" type="text" name="Nombre" value="{{ $empleado->Nombre }}" id="Nombre">
 <br>
+
 <label for="Nombre"> ApellidoMaterno </label>
 <input class="form-control" type="text" name="ApellidoPaterno" value="{{ $empleado->ApellidoPaterno }}" id="ApellidoPaterno">
 <br>
+
 <label for="Nombre"> ApellidoPaterno </label>
 <input class="form-control" type="text" name="ApellidoMaterno" value="{{ $empleado->ApellidoMaterno }}" id="ApellidoMaterno">
 <br>

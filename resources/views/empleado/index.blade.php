@@ -18,7 +18,17 @@ mostrar la lista de empleados :)
     <tbody>
         @foreach ($empleados as $empleado)
         <tr>
-            
+            <td>
+
+            {{ $empleado ->id }}
+
+            </td>
+
+            <td>
+            {{--   <img src=" {{ assets('storage').'/'.$empleado->Foto }}" alt="" > --}}
+            </td>
+
+
             <td>{{ $empleado->id}}</td>
             <td>{{ $empleado->Foto}}</td>
             <td>{{ $empleado->Nombre}}</td>
@@ -27,12 +37,12 @@ mostrar la lista de empleados :)
             <td>{{ $empleado->Correo}}</td>
             <td> 
             
-            <a href="{{ url ('/empleado/'.$empleado->id.'/edit') }}">
+            <a href="{{ url('/empleado/'.$empleado->id.'/edit') }}">
             Editar  
             </a>
              |
 
-            <form method="post" action="{{url ('/empleado/'.$empleado->id)}}">
+            <form method="post" action="{{ url('/empleado/'.$empleado->id)}}">
             @csrf
             {{ method_field('DELETE') }}
 
