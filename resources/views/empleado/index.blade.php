@@ -25,7 +25,11 @@ mostrar la lista de empleados :)
             </td>
 
             <td>
-            {{--   <img src=" {{ assets('storage').'/'.$empleado->Foto }}" alt="" > --}}
+            {{ $empleado ->Foto }}
+            </td>
+
+            <td>
+            <img src=" {{ assets('storage').'/'.$empleado->Foto }}" alt="" >
             </td>
 
 

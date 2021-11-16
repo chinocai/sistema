@@ -14,6 +14,7 @@
 <br>
 <label for="Nombre"> Foto </label>
 {{ $empleado->Foto }}
+<img src=" {{ assets('storage').'/'.$empleado->Foto }}" alt="" >
 <input class="form-control" type="file" name="Foto" value="" id="Foto">
 <br>
 <input class="form-control" type="submit" value="Guardar datos" id="Enviar">
