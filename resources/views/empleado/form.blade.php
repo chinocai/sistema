@@ -13,8 +13,8 @@
 <input class="form-control" type="text" name="Correo" value="{{ $empleado->Correo }}" id="Correo">
 <br>
 <label for="Nombre"> Foto </label>
-{{ $empleado->Foto }}
-<img src=" {{ assets('storage').'/'.$empleado->Foto }}" alt="" >
+
+<img src=" {{ assets('storage').'/'.$empleado->Foto }}" width="100" alt="" >
 <input class="form-control" type="file" name="Foto" value="" id="Foto">
 <br>
 <input class="form-control" type="submit" value="Guardar datos" id="Enviar">
