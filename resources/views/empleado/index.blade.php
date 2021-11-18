@@ -9,7 +9,8 @@
 
 <a href=" {{ url('empleado/create') }} " class="btn btn-success"> Registrar nuevo empleado </a> 
 <br>
-<table class="table table-dark">
+<br>
+<table class="table table-light">
     
     <thead class="thead-light">
         <tr>
@@ -51,16 +52,16 @@
             <td>{{ $empleado->Correo}}</td>
             <td> 
             
-            <a href="{{ url('/empleado/'.$empleado->id.'/edit') }}">
+            <a href="{{ url('/empleado/'.$empleado->id.'/edit') }}" class="btn btn-outline-warning">
             Editar  
             </a>
              |
 
-            <form method="post" action="{{ url('/empleado/'.$empleado->id)}}">
+            <form method="post" action="{{ url('/empleado/'.$empleado->id) }}" class="d-inline">
             @csrf
             {{ method_field('DELETE') }}
 
-            <input type="submit" onclick="return confirm('¿Querés Borrar?')" value="Borrar">
+            <input type="submit" onclick="return confirm('¿Querés Borrar?')" value="Borrar" class="btn btn-outline-danger">
 
                 
             </form>                
