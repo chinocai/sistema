@@ -1,12 +1,15 @@
-mostrar la lista de empleados :)
+@extends('layouts.app')
 
-@if (Session::has('mensaje'))
+@section('content')
+<div class="container">
+
+@if(Session::has('mensaje'))
 {{ Session::get('mensaje') }}
 @endif
 
 <a href=" {{ url('empleado/create') }} "> Registrar nuevo empleado </a> 
 
-<table class="table table-light">
+<table class="table table-dark">
     
     <thead class="thead-light">
         <tr>
@@ -68,3 +71,5 @@ mostrar la lista de empleados :)
     </tbody>
 
 </table>
+</div>
+@endsection
