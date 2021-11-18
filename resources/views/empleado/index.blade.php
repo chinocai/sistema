@@ -7,8 +7,8 @@
 {{ Session::get('mensaje') }}
 @endif
 
-<a href=" {{ url('empleado/create') }} "> Registrar nuevo empleado </a> 
-
+<a href=" {{ url('empleado/create') }} " class="btn btn-success"> Registrar nuevo empleado </a> 
+<br>
 <table class="table table-dark">
     
     <thead class="thead-light">
