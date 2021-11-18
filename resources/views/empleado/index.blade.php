@@ -52,7 +52,7 @@
             <td>{{ $empleado->Correo}}</td>
             <td> 
             
-            <a href="{{ url('/empleado/'.$empleado->id.'/edit') }}" class="btn btn-outline-warning">
+            <a href="{{ url('/empleado/'.$empleado->id.'/edit') }}" class="btn btn-warning">
             Editar  
             </a>
              |
@@ -61,7 +61,7 @@
             @csrf
             {{ method_field('DELETE') }}
 
-            <input type="submit" onclick="return confirm('¿Querés Borrar?')" value="Borrar" class="btn btn-outline-danger">
+            <input type="submit" onclick="return confirm('¿Querés Borrar?')" value="Borrar" class="btn btn-danger">
 
                 
             </form>                

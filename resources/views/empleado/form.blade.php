@@ -19,12 +19,12 @@
 <br>
 <label for="Nombre"> Foto </label>
 @if(isset($empleado->Foto))
-<img src=" {{ asset('storage').'/'.$empleado->Foto }}" width="20" height="20" alt="">
+<img src=" {{ asset('storage').'/'.$empleado->Foto }}" width="100" alt="">
 @endif
 <input class="form-control" type="file" name="Foto" value="" id="Foto">
+
 <br>
 <input class="form-control" type="submit" value=" {{ $modo }} datos" id="Enviar"> 
-
-<a href=" {{ url('empleado/') }} "> Regresar </a>
-
 <br>
+<br>
+<a href=" {{ url('empleado/') }}" class="btn btn-dark"> Regresar </a>
