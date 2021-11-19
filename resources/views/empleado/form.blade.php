@@ -2,6 +2,18 @@
 
 <h1> {{ $modo}} empleado </h1>
 
+@if(count($errors)>0)
+
+    <div class="alert alert-danger" role="alert">
+        <ul>
+    @foreach($errors->all() as $error)
+    <li>{{ $error }}</li>
+    @endforeach
+</ul>
+    </div>
+
+@endif
+
 <label for="Nombre"> Nombre </label>
 <input class="form-control" type="text" name="Nombre" value="{{ isset($empleado->Nombre)?$empleado->Nombre:'' }}" id="Nombre">
 <br>
