@@ -19,7 +19,7 @@
 <br>
 <label for="Nombre"> Foto </label>
 @if(isset($empleado->Foto))
-<img src=" {{ asset('storage').'/'.$empleado->Foto }}" width="100" alt="">
+<img src=" {{ asset('storage').'/'.$empleado->Foto }}" width="100" alt=""> 
 @endif
 <input class="form-control" type="file" name="Foto" value="" id="Foto">
 
