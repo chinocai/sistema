@@ -16,7 +16,7 @@ class EmpleadoController extends Controller
      */
     public function index()
     {
-        $datos['empleados']=Empleado::paginate(5);
+        $datos['empleados']=Empleado::paginate(1);
         return view('empleado.index',$datos);
 
     }
@@ -135,7 +135,7 @@ class EmpleadoController extends Controller
         Empleado::where('id','=',$id)->update($datosEmpleado);  
         $empleado=Empleado::findOrFail($id);     
         //return view('empleado.edit', compact('empleado'));
-        
+
         return redirect('empleado')->with('mensaje', 'Empleado modificado');
     }
 
