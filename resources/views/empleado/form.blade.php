@@ -17,7 +17,7 @@
 <label for="Nombre"> Correo </label>
 <input class="form-control" type="text" name="Correo" value="{{ isset($empleado->Correo)?$empleado->Correo:'' }}" id="Correo">
 <br>
-<label for="Nombre"> Foto </label>
+<label for="Nombre">  </label>
 @if(isset($empleado->Foto))
 <img src=" {{ asset('storage').'/'.$empleado->Foto }}" class="img-thumbnail img-fluid" alt=""> 
 @endif
